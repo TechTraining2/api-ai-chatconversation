@@ -1,7 +1,7 @@
 {
   "name": "API.AI chatconversation demonstration",
   "description": "API.AI chatconversation demonstration",
-  "repository": "https://github.com/TechTraining2/api-ai-chatconversation.git",
+  "repository": "https://github.com/TechTraining2/api-ai-chatconversation",
   "logo": "http://xvir.github.io/img/apiai.png",
   "keywords": ["api.ai", "natural language"]
 }
