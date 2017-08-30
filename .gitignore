@@ -1,60 +1,26 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+# Api.ai - sample webhook implementation in Python
 
-# C extensions
-*.so
+This is a really simple webhook implementation that gets Api.ai classification JSON (i.e. a JSON output of Api.ai /query endpoint) and returns a fulfillment response.
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-*.pyc
-__pycache__
+More info about Api.ai webhooks could be found here:
+[Api.ai Webhook](https://docs.api.ai/docs/webhook)
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# Deploy to:
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+# What does the service do?
+It's a weather information fulfillment service that uses [Yahoo! Weather API](https://developer.yahoo.com/weather/).
+The services takes the `geo-city` parameter from the action, performs geolocation for the city and requests weather information from Yahoo! Weather public API. 
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.cache
-nosetests.xml
-coverage.xml
+The service packs the result in the Api.ai webhook-compatible response JSON and returns it to Api.ai.
 
-# Translations
-*.mo
-*.pot
+## How to make contributions?
+Please read and follow the steps in the [CONTRIBUTING.md](CONTRIBUTING.md).
 
-# Django stuff:
-*.log
+## License
+See [LICENSE](LICENSE).
 
-# Sphinx documentation
-docs/_build/
+## Terms
+Your use of this sample is subject to, and by using or downloading the sample files you agree to comply with, the [Google APIs Terms of Service](https://developers.google.com/terms/).
 
-# PyBuilder
-target/
-
-#MacOS
-.DS_Store
-.localized%  
+This is not an official Google product

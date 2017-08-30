@@ -1,70 +1,18 @@
-api.ai: Python SDK for `API.AI <http://api.ai>`_
-=========================
+# Api.ai - sample webhook implementation in Python
 
-.. image:: https://badge.fury.io/py/apiai.svg
-    :target: http://badge.fury.io/py/apiai
+This is a really simple webhook implementation that gets Api.ai classification JSON (i.e. a JSON output of Api.ai /query endpoint) and returns a fulfillment response.
 
-.. image:: https://travis-ci.org/api-ai/api-ai-python.svg
-    :target: https://travis-ci.org/api-ai/api-ai-python
+More info about Api.ai webhooks could be found here:
+[Api.ai Webhook](https://docs.api.ai/docs/webhook)
 
+# Deploy to:
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Overview
---------
+# What does the service do?
+It's a weather information fulfillment service that uses [Yahoo! Weather API](https://developer.yahoo.com/weather/).
+The services takes the `geo-city` parameter from the action, performs geolocation for the city and requests weather information from Yahoo! Weather public API. 
 
-The API.AI Python SDK makes it easy to integrate speech recognition with API.AI natural language processing API. API.AI allows using voice commands and integration with dialog scenarios defined for a particular agent in API.AI.
-
-Prerequsites
---------
-
-Create an `API.AI account <http://api.ai>`_.
-
-
-Running examples
---------
-
-1. Find examples from 'examples' path.
-2. Insert API key.
-
-.. code-block:: python
-
-    >>> CLIENT_ACCESS_TOKEN = '<YOUR_CLIENT_ACCESS_TOKEN>'
-    ...
-
-Features
---------
-
-- Speech Recognition.
-- Voice Activity Detection.
-- Natural Language Processing.
-
-Installation
-------------
-
-To install apiai, simply:
-
-.. code-block:: bash
-
-    $ pip install apiai
-
-or install it from repo:
-
-.. code-block:: bash
-
-    $ pip install https://github.com/api-ai/api-ai-python.git
-
-You might run into problems because some dependencies in your python environment are missing. You need to install numpy (which is available in almost all package managers). For running the examples you also need python audio.
-
-In ubuntu the following will do the job:
-
-.. code-block:: bash
-
-    $ apt-get install python-pyaudio python-numpy
-    $ pip install apiai
-
-Documentation
--------------
-
-Documentation is available at http://api.ai.
+The service packs the result in the Api.ai webhook-compatible response JSON and returns it to Api.ai.
 
 ## How to make contributions?
 Please read and follow the steps in the [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -75,4 +23,4 @@ See [LICENSE](LICENSE).
 ## Terms
 Your use of this sample is subject to, and by using or downloading the sample files you agree to comply with, the [Google APIs Terms of Service](https://developers.google.com/terms/).
 
-This is not an official Google product.
+This is not an official Google product
